@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @*Bundling is used while referencing css and javascripts files*@
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img id="headerImg" src="~/Content/images/header_image/header.jpg" />
+            @Html.Partial("Menu")
+        </header>
+        <br />
+        <br />
+        <div id="pageContainer">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
